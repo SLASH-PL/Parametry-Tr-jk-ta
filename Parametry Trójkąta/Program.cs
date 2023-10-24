@@ -58,7 +58,7 @@ else if ((check(a, b, c)) == 2)
     }
 }
 
-int check(double a, double b, double c)
+static int check(double a, double b, double c)
 {
     if(a <= 0 || b <= 0 || c <= 0)
     {
@@ -74,7 +74,7 @@ int check(double a, double b, double c)
     }
 }
 
-int check1(double a, double b, double c)
+static int check1(double a, double b, double c)
 {
     if ((Math.Pow(a,2) == Math.Pow(b,2) + Math.Pow(c,2)) || (Math.Pow(b, 2) == Math.Pow(a, 2) + Math.Pow(c, 2)) || (Math.Pow(c, 2) == Math.Pow(a, 2) + Math.Pow(b, 2)))
     {
