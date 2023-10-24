@@ -1,5 +1,4 @@
-﻿using System.Security.Authentication.ExtendedProtection;
-using System.Globalization;
+﻿using System.Globalization;
 
 CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 string input = Console.ReadLine();
@@ -21,12 +20,15 @@ else if ((check(a, b, c)) == 1)
 else if ((check(a, b, c)) == 2)
 {
     //obwód
-    Console.WriteLine($"obwód = {a + b + c}");
+    double obw = a + b + c;
+    string obws = obw.ToString("0.00#");
+    Console.WriteLine($"obwód = {obws}");
     //pole
     double s = (a + b + c) / 2;
     double p = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
     p = Math.Round(p, 2);
-    Console.WriteLine($"pole = {p}");
+    string pol = p.ToString("0.00#");
+    Console.WriteLine($"pole = {pol}");
     //typ
     if (check1(a, b, c) == 0)
     {
